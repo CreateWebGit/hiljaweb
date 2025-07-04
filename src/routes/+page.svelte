@@ -30,7 +30,7 @@
     <div class="text-container text-center">
         <h1 class="mb-1">Sidan lastas just nu!</h1>
         <h2>Vi är mitt i en logistisk operation av högsta klass. <br class="hide-mobile"/> Hemsidan är på väg in i lagret!</h2>
-        <p class="mt-2">Vi erbjuder smidiga logistiklösningar för företag i hela Sverige. <br class="hide-mobile"/> Vi hanterar allt från 3PL-lager till transport och frakt. Alltid med gratis konsultation.</p>
+        <p class="mt-2">Vi erbjuder smidiga logistiklösningar för företag i hela Sverige. <br class="hide-mobile"/> Vi hanterar allt från 3PL-lager till transport och frakt. Alltid med gratis konsultation. <br clas="hide-mobile"/> Under tiden kan ni såklart:</p>
     </div>
     <div class="footer d-flex gap-1">
         <a class="button" href="https://www.linkedin.com/company/hilja-logistics" target="_blank">Följa oss på LinkedIn</a>
