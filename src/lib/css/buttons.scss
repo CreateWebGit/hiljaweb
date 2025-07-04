@@ -1,0 +1,31 @@
+button, .button {
+    all: unset;
+    appearance: none;
+    display: grid;
+    place-items: center;
+    font-family: 'Rubik';
+    padding: 0.85rem 0;
+    background-color: var(--color-accent);
+    color: white;
+    border-radius: 10rem;
+    cursor: pointer;
+    font-weight: 500;
+    width: 200px;
+    transition: background-color 0.1s ease, color 0.1s ease;
+
+    &:hover {
+        background-color: white;
+        color: var(--color-bg);
+    }
+
+    &.stroked {
+        background-color: transparent;
+        outline: 1px solid white;
+        outline-offset: -1px;
+
+        &:hover {
+            background-color: white;
+            color: var(--color-bg);
+        }
+    }
+}
