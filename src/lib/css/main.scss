@@ -1,75 +1,53 @@
 @use './typography.scss' as *;
 @use './variables.scss' as *;
+@use './header.scss' as *;
 @use './buttons.scss' as *;
 @use './utilities.scss' as *;
-
-body {
-    font-family: 'Rubik';
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    background-color: var(--color-bg);
-
-    @media (max-width: 768px) {
-        overflow: hidden;
-    }
-}
+@use './sections.scss' as *;
+@use './cw_grid.scss' as *;
+@use './hamburgers.scss' as *;
 
 html {
-    background-color: var(--color-bg);
-}
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 16px;
+    scroll-behavior: smooth;
 
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5rem;
-    height: calc(100vh - 20rem);
-    padding: 10rem 2rem;
-    position: relative;
-    z-index: 1;
+    @media (min-width: 1920px) {
+        font-size: 16px;
+    }
+
+    @media (max-width: 1200px) {
+        font-size: 1.33vw;
+    }
 
     @media (max-width: 768px) {
-        gap: 3rem;
-        height: calc(100dvh - 10rem);
-        padding: 5rem 2rem;
-        overflow: hidden;
-        justify-content: center;
+        font-size: 16px;
+        touch-action: pan-y;
+        overscroll-behavior: none;
     }
 }
 
-.logo-container {
-    @media (max-width: 768px) {
-        text-align: center;
-    }
-    img {
-        @media (max-width: 768px) {
-            width: 75%;
-        }
+body {
+    background: var(--color-bg);
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+
+    * {
+        box-sizing: border-box;
     }
 }
 
-.footer {
-    @media (max-width: 768px) {
-        flex-direction: column;
-    }
-}
-
-.stripes {
-    display: flex;
-    flex-direction: column;
+.cw-image-container {
+    height: 100%;
     width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
+    border-radius: 0.5rem;
+    overflow: hidden;
 
-    .stripe {
-        height: 12px;
+    img {
+        height: 100%;
         width: 100%;
-        background-color: white;
-
-        &.blue {
-            background-color: var(--color-accent);
-        }
+        object-fit: cover;
     }
 }

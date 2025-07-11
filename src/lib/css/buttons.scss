@@ -1,31 +1,46 @@
-button, .button {
+button:not(.hamburger), .button {
     all: unset;
-    appearance: none;
     display: grid;
     place-items: center;
-    font-family: 'Rubik';
-    padding: 0.85rem 0;
-    background-color: var(--color-accent);
+    padding: 0.6875rem 1rem;
     color: white;
-    border-radius: 10rem;
-    cursor: pointer;
+    background: black;
     font-weight: 500;
-    width: 200px;
+    border-radius: 0.5rem;
     transition: background-color 0.1s ease, color 0.1s ease;
+    cursor: pointer;
+    text-decoration: none;
 
-    &:hover {
-        background-color: white;
-        color: var(--color-bg);
+    &.small {
+        padding: 0.55rem 1rem;
+        font-size: 0.875rem;
     }
 
-    &.stroked {
-        background-color: transparent;
-        outline: 1px solid white;
-        outline-offset: -1px;
+    &.primary {
+        background-color: var(--color-accent);
 
         &:hover {
-            background-color: white;
-            color: var(--color-bg);
+            background-color: var(--color-bg-dark-alt) !important;
+            color: white;
         }
+    }
+
+    &.secondary {
+        background-color: #E1F5FE;
+        color: var(--color-accent);
+
+        &:hover {
+            background-color: var(--color-bg-dark-alt);
+            color: white;
+        }
+    }
+
+    &.tertiary {
+        background-color: white;
+        color: var(--color-accent);
+    }
+
+    &.width-fit {
+        width: fit-content;
     }
 }

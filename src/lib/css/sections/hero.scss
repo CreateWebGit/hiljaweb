@@ -1,0 +1,11 @@
+.hl-section--hero {
+    height: 100vh;
+    background: url('/images/hero_bg.png'), var(--hero-gradient);
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+
+    @media (max-width: 768px) {
+        height: 95vh;
+    }
+}

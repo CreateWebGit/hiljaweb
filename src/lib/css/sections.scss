@@ -1,0 +1,308 @@
+@use './sections/hero.scss';
+
+section {
+    max-width: 1200px;
+    margin: auto;
+
+    @media (max-width: 768px) {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    @media (max-width: 1264px) {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    &.section-full-width {
+        max-width: unset;
+        width: 100%;
+        padding-left: calc(50vw - var(--section-width) / 2);
+        padding-right: calc(50vw - var(--section-width) / 2);
+
+        @media (max-width: 768px) {
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        @media (max-width: 1264px) {
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+    }
+
+    &.hl-section--hero {
+        padding-top: 11.25rem;
+
+        @media (max-width: 768px) {
+            padding-top: 8rem;
+        }
+    }
+
+    &.hl-section--vanlig {
+        padding-top: 8rem;
+    }
+
+    &.hl-section--help {
+        padding-bottom: 8rem;
+    }
+
+    &.hl-section--contact {
+        padding-top: 8rem;
+
+        @media (max-width: 768px) {
+            padding-bottom: 8rem;
+        }
+    }
+}
+
+.section-y-padding {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.section-y-padding-xl {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+
+.hl-section--vanlig {
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+
+        li {
+            display: flex;
+            gap: 1rem;
+
+            .icon-container {
+                img {
+                    height: 2rem;
+                    width: 2rem;
+                }
+            }
+
+            .text-container {
+                display: flex;
+                flex-direction: column;
+                gap: 0.375rem;
+                margin-top: 0.5rem;
+            }
+        }
+    }
+}
+
+.hl-section--kan {
+    .services-container {
+        .cw-col-8, .cw-col-4 {
+            height: 18.4375rem;
+            background: #e3e3e3;
+            border-radius: 8px;
+        }
+
+        .services-card {
+            padding: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-size: cover;
+            box-shadow: 0px 0px 0px 50rem rgba(32, 32, 32, 0.35) inset;
+            background-position: bottom;
+
+            h3 {
+                color: white;
+            }
+
+            p {
+                color: rgba(255,255,255,0.75);
+            }
+
+            &.truck {
+                background-image: url('/images/services_truck.jpg');
+            }
+
+            &.ship {
+                background-image: url('/images/services_ship.jpg');
+            }
+
+            &.flight {
+                background-image: url('/images/services_flight.jpg');
+            }
+
+            &.lager {
+                background-image: url('/images/services_lager.jpg');
+            }
+            
+            .text-container {
+                display: flex;
+                flex-direction: column;
+                gap: 0.375rem;
+            }
+        }
+    }
+}
+
+.hl-section--help {
+    .help-container {
+        grid-template-areas: 
+        "big big big big . . . . . . . ."
+        "big big big big . . . . . . . .";
+        
+        @media (max-width: 768px) {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .cw-col-4 {
+            background: #ffffff;
+            height: 14.25rem;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            padding: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .icon {
+                height: 4rem;
+                width: 4rem;
+                background-color: #fafafa;
+                border-radius: 100%;
+                display: grid;
+                place-items: center;
+
+                img {
+                    height: 2rem;
+                    width: 2rem;
+                }
+            }
+
+            .text-container {
+                display: flex;
+                flex-direction: column;
+                gap: 0.375rem;
+            }
+
+            &:first-of-type {
+                grid-area: big;
+                height: unset;
+                box-shadow: 0px 0px 0px 50rem rgba(32, 32, 32, 0.35) inset;
+                background-image: url('/images/forklift_background.jpg');
+                background-size: cover;
+
+                @media (max-width: 768px) {
+                    height: 28rem;
+                }
+            }
+        }
+    }
+}
+
+.hl-section--erfarenhet {
+    background-color: var(--color-bg-dark);
+
+    @media (max-width: 768px) {
+        row-gap: 2rem;
+    }
+
+    h3 {
+        line-height: 1.5;
+        color: white;
+        font-weight: 400;
+    }
+
+    .number-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            text-align: center;
+            margin-top: 2rem;
+
+            h1 {
+                font-size: 64px;
+            }
+        }
+        
+        .number {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &:first-of-type {
+                align-items: flex-start;
+            }
+
+            &:last-of-type {
+                align-items: flex-end;
+            }
+
+            h1 {
+                color: var(--color-accent);
+            }
+        }
+    }
+    
+    .logo-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 4rem;
+
+        @media (max-width: 768px) {
+            margin-top: 3rem;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+        
+        img {
+            opacity: 0.25;
+        }
+
+        .mantell {
+            height: 1.25rem;
+        }
+    }
+}
+
+.hl-section--contact {
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+
+        @media (max-width: 768px) {
+            margin: auto;
+        }
+
+        li {
+            display: flex;
+            gap: 1rem;
+
+            .icon-container {
+                img {
+                    height: 2rem;
+                    width: 2rem;
+                }
+            }
+
+            .text-container {
+                display: flex;
+                flex-direction: column;
+                gap: 0.375rem;
+                margin-top: 0.5rem;
+            }
+        }
+    }
+}

@@ -2,7 +2,7 @@
     --cw-padding-multiplier: 1;
     --cw-padding-xs-multiplier: 1;
     --cw-margin-multiplier: 1;
-    --cw-gap-multiplier: 1;
+    --cw-gap-multiplier: 0.5;
 }
 
 
@@ -103,57 +103,64 @@
 //--------------MARGIN------------
 @for $i from 1 through 10 {
     .my-#{$i} {
-        --margin: #{$i};
-        margin-top: calc(var(--margin) * 1rem * var(--cw-margin-multiplier));
-        margin-bottom: calc(var(--margin) * 1rem * var(--cw-margin-multiplier));
+        --margin-y: #{$i};
+        margin-top: calc(var(--margin-y) * 1rem * var(--cw-margin-multiplier));
+        margin-bottom: calc(var(--margin-y) * 1rem * var(--cw-margin-multiplier));
     }
 }
 
 @for $i from 1 through 10 {
     .mx-#{$i} {
-        --margin: #{$i};
-        margin-left: calc(var(--margin) * 1rem * var(--cw-margin-multiplier));
-        margin-right: calc(var(--margin) * 1rem * var(--cw-margin-multiplier));
+        --margin-x: #{$i};
+        margin-left: calc(var(--margin-x) * 1rem * var(--cw-margin-multiplier));
+        margin-right: calc(var(--margin-x) * 1rem * var(--cw-margin-multiplier));
     }
 }
 
 @for $i from 1 through 10 {
     .mt-#{$i} {
-        --margin: #{$i};
-        margin-top: calc(var(--margin) * 1rem * var(--cw-margin-multiplier));
+        --margin-t: #{$i};
+        margin-top: calc(var(--margin-t) * 1rem * var(--cw-margin-multiplier));
     }
 }
 
 @for $i from 1 through 10 {
     .mb-#{$i} {
-        --margin: #{$i};
-        margin-bottom: calc(var(--margin) * 1rem * var(--cw-margin-multiplier));
+        --margin-b: #{$i};
+        margin-bottom: calc(var(--margin-b) * 1rem * var(--cw-margin-multiplier));
     }
 }
 
 @for $i from 1 through 10 {
     .ml-#{$i} {
-        --margin: #{$i};
-        margin-left: calc(var(--margin) * 1rem * var(--cw-margin-multiplier));
+        --margin-l: #{$i};
+        margin-left: calc(var(--margin-l) * 1rem * var(--cw-margin-multiplier));
     }
 }
 
 @for $i from 1 through 10 {
     .mr-#{$i} {
-        --margin: #{$i};
-        margin-right: calc(var(--margin) * 1rem * var(--cw-margin-multiplier));
+        --margin-r: #{$i};
+        margin-right: calc(var(--margin-r) * 1rem * var(--cw-margin-multiplier));
     }
 }
 
-@for $i from 1 through 10 {
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.my-auto {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+//--------------GAP------------
+@for $i from 1 through 20 {
     .gap-#{$i} {
         --gap: #{$i};
         gap: calc(var(--gap) * 1rem * var(--cw-gap-multiplier));
     }
-}
-
-.aspect-ratio-1-1 {
-    aspect-ratio: 1 / 1;
 }
 
 .text-center {
@@ -184,6 +191,46 @@
 
 .flex-column {
     flex-direction: column;
+}
+
+.align-stretch {
+    align-items: stretch;
+}
+
+.align-start {
+    align-items: flex-start;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.align-end {
+    align-items: flex-end;
+}
+
+.justify-start {
+    justify-content: flex-start;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-end {
+    justify-content: end;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-evenly {
+    justify-content: space-evenly;
+}
+
+.justify-around {
+    justify-content: space-around;
 }
 
 .flex-column-xs {

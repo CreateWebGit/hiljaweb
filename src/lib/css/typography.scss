@@ -5,30 +5,112 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 h1, .h1 {
-    font-size: 48px;
-    font-weight: 700;
+    font-size: 4.875rem;
+    font-weight: 600;
     letter-spacing: -0.02em;
-    color: white;
+    color: var(--color-black);
+    line-height: 1;
 
     @media (max-width: 768px) {
-        font-size: 32px;
+        font-size: 48px;
     }
 }
 
-h2 {
-    font-size: 22px;
-    font-weight: 500;
+h2, .h2 {
+    font-size: 3rem;
+    font-weight: 600;
     letter-spacing: -0.02em;
-    color: var(--color-accent);
-
+    color: var(--color-black);
+    
     @media (max-width: 768px) {
-        font-size: 18px;
+        font-size: 38px;
     }
+}
+
+h3, .h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--color-black);
+}
+
+h4, .h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--color-black);
+}
+
+h5, .h5 {
+
+}
+
+h6, .h6 {
+
 }
 
 p {
-    font-size: 16px;
-    font-weight: normal;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--color-body-text-black);
     line-height: 1.5;
-    color: var(--color-body-text);
+
+    &.bold {
+        font-weight: 600;
+    }
+}
+
+.font-w-regular {
+    font-weight: 400;
+}
+
+.font-w-bold {
+    font-weight: 600;
+}
+
+.text-white {
+    color: var(--color-body-text-white);
+}
+
+.text-full-white {
+    color: white;
+}
+
+.text-accent {
+    color: var(--color-accent);
+}
+
+a {
+    color: var(--color-accent);
+
+    * {
+        color: var(--color-accent);
+    }
+
+    &:hover {
+        color: var(--color-bg-dark-alt);
+
+        * {
+            color: var(--color-bg-dark-alt);
+        }
+    }
+
+    &.white-link {
+        color: var(--color-body-text-white);
+
+        * {
+            color: var(--color-body-text-white);
+        }
+    }
+}
+
+.pill {
+    color: white;
+    font-weight: 500;
+    font-size: 0.75rem;
+    padding: 0.5rem 0.625rem;
+    background-color: rgba(255, 255, 255, 0.50);
+    width: fit-content;
+    text-transform: uppercase;
+    border-radius: 3.125rem;
 }

@@ -1,41 +1,43 @@
 <script>
-    import IconAnimation from "$lib/components/IconAnimation.svelte";
+    import SectionHero from "$lib/components/SectionHero.svelte";
+    import SectionVanlig from "$lib/components/SectionVanlig.svelte";
+    import SectionKan from "$lib/components/SectionKan.svelte";
+    import SectionHelp from "$lib/components/SectionHelp.svelte";
+    import SectionErfarenhet from "$lib/components/SectionErfarenhet.svelte";
+    import SectionKontakt from "$lib/components/SectionKontakt.svelte";
+
+    import Header from "$lib/components/Header.svelte";
+    import Footer from "$lib/components/Footer.svelte";
+    import CookieNotice from "$lib/components/CookieNotice.svelte";
 </script>
 
 <svelte:head>
-    <title>Hilja Logistics – Sidan är under konstruktion</title>
-    <meta name="description" content="Hilja Logistics erbjuder kompletta logistiklösningar – från 3PL-lager till frakt. Just nu bygger vi vår nya hemsida." />
+    <title>Hilja Logistics – Skräddarsydd logistik utan krångel</title>
+    <meta name="description" content="Vi hjälper företag hitta rätt logistiklösning, från frakt och lager till hela supply chain. Ingen försäljning. Bara gratis rådgivning tills du är redo." />
+    <meta name="keywords" content="logistik, logistiklösningar, 3PL, lagerlösning, företagslogistik, skräddarsydd logistik, supply chain, transportlösningar, frakt, tredjepartslogistik, fraktpartner, logistikpartner, logistikrådgivning, fraktföretag, kostnadsfri logistikrådgivning, smart logistik, fraktlösning, lager och frakt, företagsfrakt, logistiknätverk, Hilja Logistics" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="UTF-8" />
 
-    <meta property="og:title" content="Hilja Logistics – Sidan är under konstruktion" />
-    <meta property="og:description" content="Vi bygger en ny digital terminal! Under tiden kan du följa oss på LinkedIn." />
+    <meta property="og:title" content="Hilja Logistics – Skräddarsydd logistik utan krångel" />
+    <meta property="og:description" content="Nästan 150 års erfarenhet. Vi hittar rätt lösning för dig, inte tvärtom." />
+    <meta property="og:image" content="https://hiljalogistics.se/og-image.jpg" />
     <meta property="og:url" content="https://hiljalogistics.se" />
     <meta property="og:type" content="website" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Hilja Logistics – Sidan är under konstruktion" />
-    <meta name="twitter:description" content="Vi bygger en ny digital terminal! Under tiden kan du följa oss på LinkedIn." />
+    <meta name="twitter:title" content="Hilja Logistics – Skräddarsydd logistik utan krångel" />
+    <meta name="twitter:description" content="Vi hjälper företag hitta logistiklösningar utan kostnad. Kontakta oss för rådgivning." />
+    <meta name="twitter:image" content="https://hiljalogistics.se/og-image.jpg" />
 </svelte:head>
 
-<div class="stripes">
-    <div class="stripe"></div>
-    <div class="stripe blue"></div>
-</div>
-
 <main>
-    <div class="logo-container">
-        <img src="/images/hilja-logo.svg" alt="hilja logo" width="247" height="95">
-    </div>
-    <div class="text-container text-center">
-        <h1 class="mb-1">Sidan lastas just nu!</h1>
-        <h2>Vi är mitt i en logistisk operation av högsta klass. <br class="hide-mobile"/> Hemsidan är på väg in i lagret!</h2>
-        <p class="mt-2">Vi erbjuder smidiga logistiklösningar för företag i hela Sverige. <br class="hide-mobile"/> Vi hanterar allt från 3PL-lager till transport och frakt. Alltid med gratis konsultation. <br clas="hide-mobile"/> Under tiden kan ni såklart:</p>
-    </div>
-    <div class="footer d-flex gap-1">
-        <a class="button" href="https://www.linkedin.com/company/hilja-logistics" target="_blank">Följa oss på LinkedIn</a>
-        <a class="button stroked" href="mailto:hilja@hiljalogistics.se" target="_blank">Mejla oss</a>
-    </div>
+    <Header/>
+    <SectionHero/>
+    <SectionVanlig/>
+    <SectionKan/>
+    <SectionHelp/>
+    <SectionErfarenhet/>
+    <SectionKontakt/>
+    <Footer/>
+    <CookieNotice/>
 </main>
-
-<!-- <IconAnimation/> -->
