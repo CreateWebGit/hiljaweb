@@ -35,7 +35,7 @@
     <div class="cw-col-1 cw-col-xs-12"></div>
     <div class="cw-col-5 cw-col-xs-12 hide-mobile">
         <div class="cw-image-container">
-            <img src="/images/forklift_guy.jpg" alt="blurry guy walking past a forklift"/>
+            <img loading="lazy" src="/images/forklift_guy.webp" alt="blurry guy walking past a forklift"/>
         </div>
     </div>
 </section>

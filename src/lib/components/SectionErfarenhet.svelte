@@ -27,7 +27,7 @@
         },
         {
             link: '',
-            image: '/images/mantell-logga-vit.png',
+            image: '/images/mantell-logga-vit.webp',
             class: 'mantell'
         },
         {
@@ -65,7 +65,7 @@
     <div class="cw-col-12 cw-col-xs-12">
         <div class="logo-container">
             {#each logoImages as logo}
-                <img src={logo.image} class={logo.class} alt="logo for"/>
+                <img src={logo.image} class={logo.class} alt="logo for" loading="lazy"/>
             {/each}
         </div>
         <a class="button primary width-fit mt-5 hide-desktop mx-auto" href="#kontakt">Kontakta oss idag</a>

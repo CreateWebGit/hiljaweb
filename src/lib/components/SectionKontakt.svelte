@@ -32,7 +32,7 @@
         </div>
         <div class="cw-col-5 hide-mobile">
             <div class="cw-image-container">
-                <img src="/images/contact_image.jpg" alt="2 women talking in a warehouse"/>
+                <img loading="lazy" src="/images/contact_image.webp" alt="2 women talking in a warehouse"/>
             </div>
         </div>
         <div class="cw-col-2"></div>
