@@ -1,0 +1,186 @@
+.team-carousel-wrapper {
+    display: grid;
+
+    @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .team-carousel-container {
+        position: relative;
+        display: grid;
+        overflow: hidden;
+        height: 342px;
+        grid-template-columns: repeat(12, 1fr);
+
+        @media (max-width: 768px) {
+            display: flex;
+            flex-direction: column;
+            height: 685px;
+        }
+
+        .team-carousel-item {
+            grid-column: 1 / span 11;
+            display: flex;
+            gap: 2rem;
+            position: absolute;
+            /* padding: 1rem; */
+            border-radius: 0.5rem;
+
+            @media (max-width: 768px) {
+                flex-direction: column;
+                padding: 0;
+            }
+
+            .team-image-container {
+                height: 19.3125rem;
+                width: 15.1875rem;
+                flex: 1 0 15.1875rem;
+                border-radius: 0.25rem;
+                overflow: hidden;
+
+                @media (max-width: 768px) {
+                    width: 100%;
+                }
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    filter: saturate(0);
+                }
+            }
+
+            .team-info-container {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem 0;
+
+                .team-name {
+                    font-size: 1.5rem;
+                }
+
+                .team-position {
+                    font-size: 1rem;
+                }
+
+                .team-description {
+
+                }
+
+                .team-contact-details {
+                    margin-top: auto;
+                    ul {
+                        margin: 0;
+                        padding: 0;
+                        list-style: none;
+                        display: flex;
+                        gap: 1rem;
+
+                        @media (max-width: 768px) {
+                            flex-direction: column;
+                        }
+                    }
+                }
+            }
+        }
+
+        .team-carousel-thumbnails-container {
+            grid-column: 12 / 13;
+            display: flex;
+            flex-direction: column;
+            /* justify-content: space-between; */
+            gap: 0.7rem;
+            padding: 0 0.70rem;
+
+            @media (max-width: 768px) {
+                display: none;
+            }
+
+            .team-carousel-thumbnail {
+                background-color: #2A3441;
+                padding: 0.5rem;
+                aspect-ratio: 1 / 1;
+                overflow: hidden;
+                border-radius: 0.35rem;
+                opacity: 0.5;
+                user-select: none;
+                cursor: pointer;
+                transition: opacity 0.2s ease, transform 0.2s ease;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    border-radius: 0.25rem;
+                    filter: saturate(0);
+                }
+
+                &.active {
+                    opacity: 1;
+                    transform: translateX(0.50rem);
+                }
+            }
+        }
+    }
+
+    .team-carousel-indicators {
+        display: flex;
+        gap: 0.35rem;
+
+        .indicator {
+            height: 8px;
+            width: 8px;
+            background-color: #2A3441;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: width 0.2s ease, background-color 0.2s ease;
+
+            .progress {
+                height: inherit;
+                width: 0;
+                background: white;
+                border-radius: 8px;
+            }
+
+            &.active {
+                background-color: white;
+                .progress {
+                    // width: 100%;
+                    background: white;
+                }
+            }
+        }
+
+        &.animation-on {
+            .indicator {
+                background-color: #2A3441;
+                &.active {
+                    width: 32px;
+
+                    .progress {
+                        width: unset;
+                        animation: indicatorAnimation 10s linear;
+                    }
+                }
+            }
+        }
+    }
+
+    .indicator-button-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+@keyframes indicatorAnimation {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 100%;
+    }
+}

@@ -1,4 +1,5 @@
 <script>
+    import TeamCarousel from "./TeamCarousel.svelte";
     let logoImages = [
         {
             link: '',
@@ -62,12 +63,8 @@
             </div>
         </div>
     </div>
-    <div class="cw-col-12 cw-col-xs-12">
-        <div class="logo-container">
-            {#each logoImages as logo}
-                <img src={logo.image} class={logo.class} alt="logo for" loading="lazy"/>
-            {/each}
-        </div>
-        <a class="button primary width-fit mt-5 hide-desktop mx-auto" href="#kontakt">Kontakta oss idag</a>
+    <div class="cw-col-12 cw-col-xs-12 pt-4">
+        <h1 class="h2 text-center text-full-white mb-2">Det här är <span class="text-accent">vi</span></h1>
+        <TeamCarousel/>
     </div>
 </section>
