@@ -73,7 +73,7 @@
     }
 
     onMount(() => {
-        carouselTimer = setInterval(goToNextSlide, 10000);
+        carouselTimer = setInterval(goToNextSlide, 20000);
     })
 </script>
 <!-- in:fly={{ x: direction() * 100, duration: 500, delay: 300 }} out:fly={{y: 50, duration: 500}} -->
